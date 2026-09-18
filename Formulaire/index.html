@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulaire de contact</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="container">
+        <h1>Formulaire de contact</h1>
+
+        <form id="formulaire">
+            <fieldset id="infos">
+                <legend>Informations</legend>
+
+                <div class="champ">
+                    <label for="name">Nom :</label>
+                    <input
+                        type="text"
+                        name="nom"
+                        id="name"
+                        placeholder="Lovely"
+                        required>
+                </div>
+
+                <div class="champ">
+                    <label for="firstname">Prénom :</label>
+                    <input
+                        type="text"
+                        name="prenom"
+                        id="firstname"
+                        placeholder="Sylvie"
+                        required>
+                </div>
+
+                <div class="champ" id="choiceStatut">
+                    <span>Statut :</span>
+
+                    <div class="choix-radio">
+                        <input
+                            type="radio"
+                            name="statut"
+                            id="particulier"
+                            value="particulier"
+                            checked>
+                        <label for="particulier">Particulier</label>
+                    </div>
+
+                    <div class="choix-radio">
+                        <input
+                            type="radio"
+                            name="statut"
+                            id="professionnel"
+                            value="professionnel">
+                        <label for="professionnel">Professionnel</label>
+                    </div>
+                </div>
+
+                <div class="champ" id="div_st">
+                    <label for="societe">Société :</label>
+                    <input
+                        type="text"
+                        id="societe"
+                        name="societe"
+                        placeholder="Nom de la société">
+                </div>
+            </fieldset>
+
+            <fieldset id="message-fieldset">
+                <legend>Message</legend>
+
+                <div class="champ">
+                    <label for="objet">Objet :</label>
+
+                    <select name="objet" id="objet" required>
+                        <option value="demande_de_contact">
+                            Demande de contact
+                        </option>
+
+                        <option value="proposition_de_projet" selected>
+                            Proposition de projet
+                        </option>
+
+                        <option value="brochure_tarifaire">
+                            Envoi d'une brochure tarifaire
+                        </option>
+                    </select>
+                </div>
+
+                <div class="champ" id="div_email">
+                    <label for="email">Email :</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="email@mail.com">
+                </div>
+
+                <div class="champ">
+                    <label for="message">Votre message :</label>
+                    <textarea
+                        name="message"
+                        id="message"
+                        rows="8"
+                        placeholder="Écrivez votre message..."
+                        required></textarea>
+                </div>
+
+                <button type="submit">Envoyer</button>
+            </fieldset>
+        </form>
+    </main>
+
+    <!-- Charge uniquement le module principal -->
+    <script type="module" src="scripts/evenements.js"></script>
+</body>
+</html>

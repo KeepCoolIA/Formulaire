@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 30px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    background: #f1f5f9;
+}
+
+.container {
+    width: min(760px, 100%);
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 0 25px;
+    text-align: center;
+    color: #1d4ed8;
+}
+
+form {
+    padding: 24px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 8px 25px rgb(15 23 42 / 12%);
+}
+
+fieldset {
+    margin: 0 0 24px;
+    padding: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+}
+
+fieldset:last-child {
+    margin-bottom: 0;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: 700;
+    color: #1d4ed8;
+}
+
+.champ {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 17px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.champ:last-child {
+    margin-bottom: 0;
+}
+
+label,
+span {
+    font-weight: 600;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #94a3b8;
+    border-radius: 6px;
+    font: inherit;
+    color: #0f172a;
+    background: #ffffff;
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid rgb(59 130 246 / 25%);
+    border-color: #2563eb;
+}
+
+.choix-radio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.choix-radio input {
+    width: auto;
+}
+
+.choix-radio label {
+    font-weight: 400;
+}
+
+button {
+    width: 100%;
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 6px;
+    font: inherit;
+    font-weight: 700;
+    color: #ffffff;
+    cursor: pointer;
+    background: #2563eb;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.masque {
+    display: none;
+}
+
+.disp {
+    opacity: 0;
+    transform: translateY(-8px);
+}
+
+.app {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 550px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+}
